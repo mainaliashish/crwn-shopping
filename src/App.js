@@ -1,22 +1,19 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import "./App.css";
 
 import HomePage from "./page/homepage/homepage.component";
 import "./page/homepage/homepage.styles.scss";
-
-const HatsPage = () => (
-  <div>
-    <h1>Hats Page</h1>
-  </div>
-);
+import ShopPage from "./page/shop/shop.component";
+import HeaderComponent from "./components/header-component/header-component.component";
+import "./App.css";
 
 function App() {
   return (
     <div>
+      <HeaderComponent />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/hats" component={HatsPage} />
+        <Route path="/shop" component={ShopPage} />
       </Switch>
     </div>
   );
